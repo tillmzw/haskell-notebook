@@ -19,5 +19,5 @@ ENV PATH=$HOME/.local/bin:$PATH
 RUN stack --install-ghc --resolver lts-12.7 install ihaskell
 RUN ihaskell install --stack
 
-CMD stack exec /usr/local/bin/start-notebook.sh
+CMD stack exec --allow-different-user /usr/local/bin/start-notebook.sh
 
